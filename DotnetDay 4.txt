@@ -1,0 +1,582 @@
+Data types in C#
+	1.Value type
+	2.Pointer
+	3.Reference Type
+			
+				1).Value type(Stack):A.Predefined
+							B.User Defined 
+							
+							A.Predifined
+								a.Integer
+								b.Real Number
+								c.Booleans
+								d.Characters
+								
+							B.User Defined
+								a.Enumeration
+								b.Structures
+									
+	2.Reference Type(Heap)
+			A.Predefined
+				a.Strings
+				b.Object
+			
+			B.Userdefined
+				a.Classes
+				b.Arrays
+				c.Interfaces
+				d.Delegates
+			
+			1.Boxing	:value to reference
+			2.Unboxing:reference to value
+			
+	Intervie Question:
+	10:What is difference in generic and nongeneric collection
+   			Disadvantage
+		1.Non generic:Heavy boxing and unboxing required
+			For storing: Boxing
+			For Retrival:Unboxing
+		2.No compile time error Checking(No type safe)	
+		
+	11.	Question:What is difference between Asp and aspx
+		Ans:hello.asp :active server page
+			hello.aspx : .web form
+			
+	12.	Question:I want to print user name when the page is unloaded	
+		Answer:That time error,page is not loaded,response.text
+				response .write will not be available.. error :page is unloaded
+		
+	13.how view state works?
+		view state is maintain by the server using a hidden form field
+		view state increases page size
+		always disable the view state (good practice of programming)
+		
+		ADO.Net:It is a frame work provided by microsoft contains various classes,namespaces using which 
+			can connect various databases mysql,sql,almost all database
+			contains various namespaces ,those namespaces are called data provider
+			it contain different data provinders to connect to different databases
+			(known as ADO.NET provider)
+			(Activex data object)
+			
+	Connection Strings
+		-Data Sourse(Server Name)
+		-Initial Catalog (Database Name)
+		-Credentials(user Id,password)sql server Authentication OR
+										Integrated Security=true --Windows Authentication
+		
+		If u want to map client object:using file upload method
+		Sever.mappath  :
+		
+	14.	How do u generate javascript(client side) code in server side code?
+	Ans:response.write ""
+	
+	15.Connection string where we should keep?
+	Ans:Connection string keeping at one place ..web config file
+	
+	Easy maintainace
+	Connected Model:
+			:-
+			
+			Client Application<--->	Provider		<--->Database
+									1.Connection
+									2.Command
+									3.Data Reader		
+									
+	16.When u will use datareader
+	Ans:When u want to fetch multiple data at a time a dump in some place.
+		Only if connection is open
+		Read only 
+		Forward only
+
+	Disconnected Model:
+			:-
+			
+			Client Application
+					|
+				Data Set<--------->Provider
+										
+								Connection
+									|	
+									|
+								Data Adapter	
+								
+								
+								
+	17.Why to use data set:
+	Answer:If u cannot return reader object across the methods and accross the application 
+	
+	
+	Disconnected Arch
+	
+	
+	Stored Procedure:U ca write ur Plsql Code
+	Advantage :Complie code ..customize
+	
+	18.asynchronous  command execution: begin execution and execution method
+	 ExecuteReaderAsyn
+	 
+	19.What is asynchronous command execution ?
+	Ans:we work both in parallel way refer above
+	
+	20.	ExecuteReaderAsyn?
+	
+	21.
+	
+	Database--->SqlDataSource-->grid view
+	
+	xml file--->xmldatasource-->tree view
+	
+	The which shows databound control
+from where we take dataSource control
+
+data source:        databound control:
+
+
+Security:
+		-Authentication	Who is the user?
+		
+		-Authorization  What user can do?
+		22.How to use pure html control in ur asp.net code behid page/server
+		we need convert html into html server control by usin runat="Server"
+		skillsoft learning
+		
+		
+		Add Footer row first
+		Show footer:true
+		Edit column
+		
+		23.What is difference Eval and bind function :comes under inlinedatabinding function?
+		Ans:Diff Eval is one way and Bind is Two way.
+		THREE IN LINE
+		1.cONTAINER.ITEM--no formatting option
+		2.eVAL
+		3.bIND
+		
+		
+		24.Data Source Control caching
+		Ans:YOU can chache dataSource
+			By default sql data source control uses data table to retrive the data from database
+			You can chache these data,it will increase ur performance. these concept is known as 
+			Data source control chaching..
+			EnableCaching="true" CacheDuration="Infinite"
+			
+			25.How we Load Dataset from xmlfile
+				By using Readxml
+			26.Error Handling
+				-Structure
+				27.How many ways to handle error
+					1.Structure:
+						using	Try and catch
+					2.Handling error on page
+					Page level error Handling	
+					3.Application level:
+					
+					27.How page level tracing is enable in asp.net
+						Trace="True"
+					28.Other user should not be able to see the tracing information
+					Ans:Local only="true"
+					
+					Read about these topics:
+					1.Trace Forwarding,
+					2.Trace listener
+					3.Diagnostic switches
+					
+					Thread.CurrentThread
+					
+					Culture	:Client
+					UICulture :From Server
+					
+					ru-RU
+					language-Region
+					
+					Resources file
+					Design
+					generete Resources
+					
+					29.If u want to change uicluture during runtime
+					1.Thread
+					2.Application	Using Globalization
+					
+					Using Link Query U can Query ,any type of data source
+					gives u compile time checking(Auto intelligence)
+					It facilitates strong type checking
+					Three types Query
+					1.Link to Entity'
+					2.Link to XML
+					3.Link to SQL
+					Link SQL
+					Advantage link quert:compile time checking error
+					
+					Distributed Application:
+							
+							Amazon.com										Payment gateway(Paypal)				
+				your application Data		Response
+										<--------------------------------
+								Dept a1-------------------------------->	Other Functionality
+											Request
+											
+						Advantages:
+								1.Increases Performance
+								2.Scalability (More users can be handled)
+								
+								
+									Protocol	tcp,http,udp,MSMQ,
+		Application 1				---------		Named pipes			Application 2
+									Message 
+														Format
+														
+					For Communication:
+						1.Protocol
+						2.Message
+						
+					Standared Internet Media Formates
+						1.XML
+						2.JSON
+						
+					WCF:Use works only on open protocols
+				
+					imetadata
+					30.What is difference between TCP and HTTP
+					Ans:TCP is used to behind the firewall http is used accros the firewall
+							http is local.
+							
+		Both the side interface should be there			
+		
+		Client<-->Interface			.Net Remoting Service 		Interface	Services
+																	Class
+			----------------		---------------	
+							Using Proxy(Remote Method)			Remote Object
+
+
+Drawback:
+Both the client and server should be implemented in .Net
+						
+							WEB Services
+
+								http		
+Java Client 		-----		-----			.Net Services
+								XML
+									
+									SOAP--Header
+										--Body
+										
+	webservices
+
+Client	1	-------->TCP------------>.Net Remoting Services
+					-------				
+					Binary		
+					
+Client 2 <----------Http<-------------Web services					
+					-----
+					Soap
+					
+Web services:Cross platform
+Drawback : Open Protocol
+
+
+WCF Sevices
+A:Address
+B:Binding(Protocol,Message)
+C:Contract					
+
+														
+														
+				TCP													
+		C1---------------End points------------------------- 	WCF
+			Binary			A,B,C								Services
+			
+			Http
+		C2---------------End Points--------------------------	
+			Soap			A,B,C
+			
+			
+			DataContract If u used
+			IT is a serializable
+			
+			
+			FallContract
+			
+			
+			Services Oriented Architecture
+			
+			31.What is use of WSDL File?
+			Ans:
+			
+									bind			Remote call(Request)			
+			Client------url----Host-------Services-------------------------------Proxy classes
+														Response
+			
+			
+			32.Both the layer need proxy class,dont require interface.
+			Ans.Both machine should have interface
+				
+						Hosting
+				
+			1.Self Hosting:
+					Any Protocol any binding
+													
+			2.Windows Services
+			3.IIS Hosting  HTTp
+			4.Windows Activation service(WAS)
+			
+			33.Which class is reponsible to host WCS Service
+			Ans: Service Host
+			
+			
+			34How you service refrences
+			Ans:By using Add Service refrences
+				Is in other way Tool--yes other way is svcutil.exe
+				
+			35.How do u configure ur  WCS Service in configuration file
+			Ans:Reside in system.service.model
+			
+			36.For security which binding u will use?
+			Ans:wshttpBinding
+			
+			37.How do u create custombinding
+			Ans:by custom binding tag
+				1.Protocol
+				2.Message
+				
+				Advantage:Meta data Binding (to get the data)
+				
+				How we create work flow
+				
+			
+		Why MVC?
+			For ASP.NET
+		1.Simple task:all the life cycle ::Degrade the performance
+		2.View State
+			U can disable the view state
+			Can we enforce the devlepor to force to disable the view state
+		(In MVc it works dirctly there is no view state)
+		3.No Seperation Of Concern:
+			Code is thightly coupled
+			u can use any model(control can use any model)
+			It is also called fake seperation of Concern
+			
+			Ans:U  cannot attached any codebehind file.
+		4.Low Testability:
+			Unique testing is not possible unless the page is loaded
+			We cannot force Developer to it
+		
+		What is MVC ?
+		Ans:It is architectural Pattern
+			It consist Of 	Model
+							View
+							Control
+			MVC is Open Source
+			Based on agile Development
+			Always follow Degine Patterns
+				S:single responsibility Principle
+	If u dont what u show anything to user always use Interface
+	
+	
+	
+	MVC Model Diagramatic Model:
+				Request
+	Client  ----------------------> Controller---->Model-->bussiness Object
+			<----------------------			<------		--->Domain Classes
+				Response								---->Services	
+				
+	Client		<-	-	----	-	-	-	-	-	----	--------------->View
+	
+	Webform--view based architectural
+	MVC--Action nased architectural
+	
+	Controller has all methods as action methods
+	
+	Url/ControllerName/ActionMethodName ---We can call any method from controller
+	
+	
+	
+	Client --------->Route------------> 				-----Controller--Model
+														               --View
+														 
+				Extension										 
+	Razor view	: .cshtml
+	web form 	:	.aspx
+	user control 
+	
+	
+	Why Master page
+	:To provide comman web layout
+	
+	MVC 5:
+	Comman layout page(MASTER pAGE)
+	
+	Ans:Master page equivalent page is layout page
+	
+	View result is a class which is used to return view
+	
+	1.When u have view result why u need action result
+	Ans:we not only return jason view,status code  example of list of substitution principle
+		dirctly implemented by microsoft
+		
+		I -Iversion control
+		
+		
+		Multiple Controls :Shared Folders
+		
+		2.can we delete model folder
+		Yes we can
+		
+		3.How u can pass models data to the view ,,how controller passes models data to view?
+		Ans:Using View Data Object
+			View data is a dictionary _Holds the data in key value pair
+			by using view data can pass controller to view
+			
+			for html+C#
+			@{
+			Code Block
+			}
+			
+			
+		State Management Tech in MVC--Action
+
+			1.View Data		Controller -->view
+			2.View Bag
+			3.Temp Data		--->for Current Request
+			4.Session		--->Browser.
+			
+			Drawback of viewdata that and viewbag
+			1.It is not strongly type
+			2.No complile time checking
+			3.
+			
+			Two type of validation
+			1.Client side
+			2.Server side
+			
+			What is Catch all route?
+			
+			
+			1.Code First
+			2.Database First
+			3.Model First(not used)
+			
+			
+			Entity framework 6
+			
+			Q:Can u authorize role based,user based?
+			Ans:User base u can authorize
+			
+			Q:How we can add errors in model state dynamically?
+			Ans:modelstate.AddModelError
+			
+			1.State management techniques in MVC--Action
+			Ans.All of the above
+			
+			2.Web Form controls are fully loaded in which control
+			ans:Page_loaded
+			
+			3.Techniques to send data controller to view
+			ans.View data and viewbag
+			
+			4.Which assemblies stored in global assemblies cache
+			ans:Shared assemblies(Strong assemblies)
+			
+			5.Post back check --
+			ans:Ispostback property
+			
+			6.which file is used to prepare site map?
+			Ans:web.siteMap
+			
+			7.Strongly typed view are type safe or not?
+			ans:True
+			
+			8.WcF ,end points-------------------------
+			ans.ABC
+				Address Binding Contract
+				
+			9.Binding consist of Protocol and message
+			
+			10.Http status code ko handle kerne ke liye
+			ans:Custom error
+			
+			11.If u want to handle error at applicaton level?
+			ans:application_error
+			Page level :Page handle error
+			
+			12.can we use link query for fetching data
+			Yes
+			
+			13.Application level handling event
+			ans.	Global
+			
+			14.Extension user control
+			ans ascx
+			
+			15.Security how we can apply
+			ans.Authorization
+				Authentication
+				
+			16.Folder level authentication
+				Asp .net
+			
+			17.Authentication cookie generate kernekeliye
+				using system.forms.authentication
+				webconfig
+			18.In how many ways we can apply thread synchronization
+				Block level using lock keyword
+				Method level	method impl attribute
+				
+			19.How u can add model level error dynamically?
+			Ans.modelstate.AddModelError
+			
+			20 Why MVC
+				Increase Performance
+				view state
+			21.Which method is used to use database to dataset by data adapter
+				Fill :database se dataset and update:dataset se database
+					
+			22.What is advantage placing the connection string in web.config file?
+				Easy to change
+			23.How view state manage internally?
+				hiddenformfield
+			24.Validation attribute are present in which namespaces
+			ans:	system.ComponentModel.DataAnnotation
+			
+			25.What is advantage of delegates
+				1.type safe
+				2.we can attach any method at run time
+			
+			26.Difference between connected and disconnected architecture?
+				Connected: connection should be open
+				Disconnected:Data set 
+							data adapter
+							
+							1.Bridge is dataadapter
+							
+			27.datareader is read only -True
+							forward only-True
+			28.It gives u compile time checking
+				attribute intellicense
+				
+			29.What is model bider in MVC?
+				It bind u r incoming data to parameters in the action method of controller
+			
+			30.How u can create custom model binder?
+				By implementing Imodelinterface
+			
+			31.If u want to keep accessible to multipole action /controoler where u would keep that view
+				Shared folder
+			32.Where u can place comman layout files and comman view?
+				Shared Folders.
+			
+				private assemblies:Local  disadvantage:dll hell problem
+				global :Key and strongname ,,global is called as shared assemblies
+			33.What is satallite assemblies?
+				Ans:resource file is called as satellite assemblies.
+					at run time
+			34.Current culture
+				
+			35.What is tracing?
+				is used for tracing information of page
+				Enable =True
+				tracing is page level tracing
+			36.How u serialize complex class?
+				By default all public -are serializable
+			
+			37.
+				By using message contract
